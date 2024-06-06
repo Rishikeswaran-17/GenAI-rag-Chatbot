@@ -1233,26 +1233,9 @@ cd GenAI-rag-Chatbot
 Use the following command to run GenAI-rag-Chatbot:
 
 ```sh
-> INSERT-RUN-COMMANDS
+> single line command for running the entire app
+> npm run dev
 ```
-
-###  Tests
-
-To execute tests, run:
-
-```sh
-> INSERT-TEST-COMMANDS
-```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
-
----
 
 ##  Contributing
 
