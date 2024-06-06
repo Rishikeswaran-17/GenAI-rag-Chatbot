@@ -1212,7 +1212,20 @@ cd GenAI-rag-Chatbot
 3. Install the dependencies:
 
 ```sh
-> INSERT-INSTALL-COMMANDS
+> # Backend - Python
+> cd Backend
+> python -m venv backend
+> ./backend/scripts/Activate.ps1
+
+> # Client - Reactjs
+> npm install --legacy-peer-deps
+
+> # server - Nodejs
+> npm i 
+
+> execute all the queries in MSSQL from queries folder
+
+
 ```
 
 ###  Running GenAI-rag-Chatbot
