@@ -1,0 +1,11 @@
+Flask
+Flask-Cors
+param
+langchain
+openai
+pypdf
+chromadb
+tiktoken
+langchain-openai
+python-dotenv
+langchain-community
