@@ -1223,7 +1223,7 @@ cd GenAI-rag-Chatbot
 > # server - Nodejs
 > npm i 
 
-> execute all the queries in MSSQL from queries folder
+> # execute all the queries in MSSQL from queries folder
 
 
 ```
