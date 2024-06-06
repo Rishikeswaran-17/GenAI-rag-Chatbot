@@ -4,5 +4,6 @@ node_modules/
 *.env
 # Ignore the Backend/backend directory
 Backend/backend/
-# Ignore the Backend/App.py file
-Backend/App.py
+
+# Ignore all __pycache__ folders within the Backend directory
+**/__pycache__/
