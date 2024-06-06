@@ -7,12 +7,12 @@
 <p align="center">
     <em>Chat Smarter with GenAI-rag Bot</em>
 </p>
-<p align="center">
+<!-- <p align="center">
 	<img src="https://img.shields.io/github/license/Rishikeswaran-17/GenAI-rag-Chatbot.git?style=flat&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Rishikeswaran-17/GenAI-rag-Chatbot.git?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Rishikeswaran-17/GenAI-rag-Chatbot.git?style=flat&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/Rishikeswaran-17/GenAI-rag-Chatbot.git?style=flat&color=0080ff" alt="repo-language-count">
-<p>
+<p> -->
 <p align="center">
 		<em>Developed with the software and tools below.</em>
 </p>
@@ -1233,7 +1233,7 @@ cd GenAI-rag-Chatbot
 Use the following command to run GenAI-rag-Chatbot:
 
 ```sh
-> single line command for running the entire app
+> # single line command for running the entire app
 > npm run dev
 ```
 
