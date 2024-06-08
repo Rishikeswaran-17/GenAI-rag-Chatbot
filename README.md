@@ -5,7 +5,7 @@
     <h1 align="center">GENAI-RAG-CHATBOT</h1>
 </p>
 <p align="center">
-    <em>Chat Smarter with GenAI-rag Bot</em>
+    <em>Chat Smarter with GenAI-RAG Banking Bot</em>
 </p>
 <!-- <p align="center">
 	<img src="https://img.shields.io/github/license/Rishikeswaran-17/GenAI-rag-Chatbot.git?style=flat&color=0080ff" alt="license">
@@ -58,7 +58,7 @@
 
 ##  Overview
 
-GenAI-rag-Chatbot project leverages the `cbfs` module to manage conversation flow, state transitions, and user interactions effectively, enhancing the chatbot functionalities. It orchestrates HTTP request routing for seamless backend operation, handling dialog flow, cognitive functions, and file storage. This project aims to provide a robust chatbot experience with optimized user engagement and efficient data processing, supporting a smooth interaction flow.
+GenAI-rag-Chatbot project leverages the OpenAI and Langchain to manage conversation flow, state transitions, and user interactions effectively, enhancing the chatbot functionalities. It orchestrates HTTP request routing for seamless backend operation, handling dialog flow, cognitive functions, and file storage. This project aims to provide a robust chatbot experience with optimized user engagement and efficient data processing, supporting a smooth interaction flow.
 
 ---
 
@@ -68,7 +68,6 @@ GenAI-rag-Chatbot project leverages the `cbfs` module to manage conversation flo
 |----|-------------------|---------------------------------------------------------------|
 | ⚙️  | **Architecture**  | This project uses a combination of Flask and React for front-end and back-end architecture. Components are well-organized and follow a standard MVC design pattern. APIs are RESTful and communication is handled efficiently. |
 | 🔩 | **Code Quality**  | The codebase follows a consistent coding style with proper indentation and meaningful variable names. Linting tools are used to maintain code quality standards. However, there could be more documentation on code conventions and best practices. |
-| 📄 | **Documentation** | The project lacks comprehensive documentation. While some parts have inline comments, overall documentation on project structure, setup, and usage is minimal. Improving documentation would make it easier for developers to understand and contribute to the project. |
 | 🔌 | **Integrations**  | Key integrations include OpenAI for language processing, Flask for backend API handling, and various front-end libraries for UI components and interactions. These integrations enhance the functionality and user experience of the chatbot. |
 | 🧩 | **Modularity**    | The codebase demonstrates good modularity with separate components for different functionalities. Modules are loosely coupled, making it easier to maintain and extend the project. Reusability is supported through the use of components and hooks in React. |
 | 🧪 | **Testing**       | Testing frameworks like Jest and React Testing Library are used for unit and integration testing. However, the test coverage could be improved to ensure the reliability of the code. Continuous integration tools may also be beneficial for automated testing. |
