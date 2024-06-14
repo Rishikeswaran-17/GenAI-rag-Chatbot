@@ -35,7 +35,7 @@ app.post("/api/upload", upload.array("file"), (req, res) => {
 });
 
 // -------------------- Login -----------------------
-app.post("/save_login", async (req, res) => {
+app.post("/api/v1/save_login", async (req, res) => {
   const { username, emailID, password } = req.body;
   try {
     console.log("Received login: ", req.body);
@@ -50,7 +50,7 @@ app.post("/save_login", async (req, res) => {
   }
 });
 
-app.post("/register", async (req, res) => {
+app.post("/api/v1/register", async (req, res) => {
   const { username, email, passwordHash } = req.body;
   console.log("Received email:", email);
   console.log("Received password:", passwordHash);
@@ -70,7 +70,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.post("/login", async (req, res) => {
+app.post("/api/v1/login", async (req, res) => {
   const { email, passwordHash } = req.body;
   try {
     const isAuthenticated = await dbOperation.loginUser(email, passwordHash);
@@ -85,10 +85,11 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.get('/gettablename', async (req, res) => {
+app.get('/api/v1/gettablename', async (req, res) => {
     try {
       const Tablename = await dbOperation.getTablenames();
       res.json(Tablename.recordset);
+      console.log("Tablename :::: ",Tablename.recordset)
     } catch (error) {
       console.log(error);
       res.status(500).json({ error: 'Internal server error for Tablename' });
@@ -98,7 +99,7 @@ app.get('/gettablename', async (req, res) => {
 // ------------------------- x x --------------------------------------
 //-------------------------- CRUD -----------------------------------------------
 
-app.get('/gettablename', async (req, res) => {
+app.get('/api/v1/gettablename', async (req, res) => {
   try {
     const Tablename = await dbOperation.getTablenames();
     res.json(Tablename.recordset);
@@ -108,7 +109,7 @@ app.get('/gettablename', async (req, res) => {
   }
 });
 
-app.post('/tablenamecategories', async (req, res) => {
+app.post('/api/v1/tablenamecategories', async (req, res) => {
   const { tableName } = req.body;
   console.log("Received POST request with tableName:", tableName); // Log to see if you received the table name correctly
   try {
@@ -122,7 +123,7 @@ app.post('/tablenamecategories', async (req, res) => {
   }
 });
 
-app.post('/insertData',upload.none(), async (req, res) => {
+app.post('/api/v1/insertData',upload.none(), async (req, res) => {
   const { tableName, dataToInsert } = req.body; // Extract tableName and dataToInsert from the request body
   console.log("Received POST request with tableName:", req.body); // Log to see if you received the table name correctly
   try {
@@ -136,7 +137,7 @@ app.post('/insertData',upload.none(), async (req, res) => {
   }
 });
 
-app.post('/updateData',upload.none(), async (req, res) => {
+app.post('/api/v1/updateData',upload.none(), async (req, res) => {
   const { tableName, dataToUpdate } = req.body; // Extract tableName and dataToInsert from the request body
   console.log("Received POST request with tableName:", req.body); // Log to see if you received the table name correctly
   try {
@@ -150,7 +151,7 @@ app.post('/updateData',upload.none(), async (req, res) => {
   }
 });
 
-app.post('/tablecategorieswithvalue', async (req, res) => {
+app.post('/api/v1/tablecategorieswithvalue', async (req, res) => {
   const { tableName } = req.body;
   console.log("Received POST request with tableName:", tableName); // Log to see if you received the table name correctly
   try {
@@ -165,7 +166,7 @@ app.post('/tablecategorieswithvalue', async (req, res) => {
 });
 // ----------------------------- x x x x x x x ----------------------------------
 // ----------------------------- DATA TYPES -------------------------------------
-app.get('/getdatabasename', async (req, res) => {
+app.get('/api/v1/getdatabasename', async (req, res) => {
   try {
     const Databasesname = await dbOperation.getDatabasename();
     res.json(Databasesname.recordset);
@@ -175,7 +176,7 @@ app.get('/getdatabasename', async (req, res) => {
   }
 });
 
-app.get('/getdatatypes', async (req, res) => {
+app.get('/api/v1/getdatatypes', async (req, res) => {
   try {
     const DataTypes = await dbOperation.getDatatypes();
     res.json(DataTypes.recordset);
@@ -185,7 +186,7 @@ app.get('/getdatatypes', async (req, res) => {
   }
 });
 
-app.post("/createTable", async (req, res) => {
+app.post("/api/v1/createTable", async (req, res) => {
   // The data sent from the frontend will be available in req.body
   const { databaseName, tableName, columns } = req.body;
   console.log("Received POST request with TABLE CREATION:", req.body);
@@ -202,7 +203,7 @@ app.post("/createTable", async (req, res) => {
 
 // ------------------------ LLAMA CHAT SQL---------------------
 
-app.post("/qafeedback", async (req, res) => {
+app.post("/api/v1/qafeedback", async (req, res) => {
   const { question, answer, questionTime, answerTime, feedback } = req.body;
   try {
     console.log("Received Data:", req.body);
@@ -220,7 +221,7 @@ app.post("/qafeedback", async (req, res) => {
   }
 });
 
-app.get('/questionlogsanalysis', async (req, res) => {
+app.get('/api/v1/questionlogsanalysis', async (req, res) => {
   try {
     const QuestionlogsAnalysis = await dbOperation.getQuestionloganalysis();
     res.json(QuestionlogsAnalysis.recordset);
@@ -231,7 +232,7 @@ app.get('/questionlogsanalysis', async (req, res) => {
   }
 });
 
-app.post('/save-response', async (req, res) => {
+app.post('/api/v1/save-response', async (req, res) => {
   const response = req.body;
   console.log('Received response:', response); // Add this line to log the received response
 
@@ -250,7 +251,7 @@ app.post('/save-response', async (req, res) => {
   }
 });
 
-app.get('/chat-response', async (req, res) => {
+app.get('/api/v1/chat-response', async (req, res) => {
   try {
     const IngestchatResponse = await dbOperation.getchatResponse();
     res.json(IngestchatResponse.recordset);

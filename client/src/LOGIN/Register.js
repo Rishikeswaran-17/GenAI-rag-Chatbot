@@ -15,7 +15,7 @@ const Register = () => {
     console.log("Email:", email);
     console.log("Password:", passwordHash);
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/register`, {
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -12,7 +12,7 @@ const AddScreen = () => {
 
   const fetchTablename = async () => {
     try {
-      const response = await fetch("`${process.env.SERVER_URL}/gettablename");
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/gettablename`);
       const data = await response.json();
       setTablename(data);
     } catch (error) {
@@ -27,7 +27,7 @@ const AddScreen = () => {
     setSelectedTable(selectedTableName);
 
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/tablenamecategories`, {
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/tablenamecategories`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -67,7 +67,7 @@ const AddScreen = () => {
       console.log("Data to be sent to backend:", dataToSend); // Log data with tableName
 
       // Send formData to your backend for database insertion
-      const response = await fetch(`${process.env.SERVER_URL}/insertData`, {
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/insertData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

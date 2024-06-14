@@ -29,7 +29,7 @@ const DataTables = () => {
 
   const fetchTablename = async () => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/gettablename`);
+      const response = await fetch(`http://localhost:5010/api/v1/gettablename`);
       const data = await response.json();
       console.log("Fetched table names:", data);
       setTablename(data);
@@ -40,7 +40,7 @@ const DataTables = () => {
 
   const fetchTableData = async (tableName) => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/tablecategorieswithvalue`, {
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/tablecategorieswithvalue`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

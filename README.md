@@ -1236,6 +1236,14 @@ Use the following command to run GenAI-rag-Chatbot:
 > npm run dev
 ```
 
+##  Webscreen Demo
+
+<img src="assets/image.png" alt="Banking Chatbot" style="width: auto; height: auto;">
+
+
+---
+
+
 ##  Contributing
 
 Contributions are welcome! Here are several ways you can contribute:

@@ -28,7 +28,7 @@ const Chat = () => {
 
   const fetchchatresponse = async () => {
     try {
-      const response = await fetch("/chat-response");
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/chat-response`);
       const data = await response.json();
       setChatresponses(data);
     } catch (error) {
@@ -276,7 +276,7 @@ const Chat = () => {
         answerTime: answerTimeFormatted,
         feedback: value || selectedEmoji || "neutral",
       });
-      const response = await fetch(`${process.env.SERVER_URL}/qafeedback`, {
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/qafeedback`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

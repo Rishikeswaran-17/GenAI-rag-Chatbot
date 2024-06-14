@@ -13,7 +13,7 @@ const CreateScreen = () => {
 
   const fetchDatabasename = async () => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/getdatabasename`);
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/getdatabasename`);
       const data = await response.json();
       setDatabasename(data);
     } catch (error) {
@@ -27,7 +27,7 @@ const CreateScreen = () => {
 
   const fetchDatatype = async () => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/getdatatypes`);
+      const response = await fetch(`${process.env.SERVER_URL}/api/v1/getdatatypes`);
       const data = await response.json();
       setDatatype(data);
     } catch (error) {
@@ -86,7 +86,7 @@ const CreateScreen = () => {
       columns: columnsData,
     };
   
-    fetch(`${process.env.SERVER_URL}/createTable`, {
+    fetch(`${process.env.SERVER_URL}/api/v1/createTable`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
