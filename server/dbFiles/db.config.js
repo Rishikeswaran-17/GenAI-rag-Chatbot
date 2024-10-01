@@ -12,5 +12,4 @@ const config = {
     },
     port: parseInt(process.env.DB_PORT, 10),
 };
-
 module.exports = config;
